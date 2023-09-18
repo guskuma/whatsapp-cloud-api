@@ -77,7 +77,6 @@ export const startExpressServer = (
       ...rest
     } = req.body.entry[0].changes[0].value.messages[0];
     const fromPhoneNumberId = req.body.entry[0].changes[0].value.metadata.phone_number_id;
-    const appId = req.body.entry[0].id;
 
     let event: PubSubEvent | undefined;
     let data: FreeFormObject | undefined;
@@ -121,7 +120,6 @@ export const startExpressServer = (
 
     if (event && data) {
       const payload: Message = {
-        appId,
         from,
         name,
         id,

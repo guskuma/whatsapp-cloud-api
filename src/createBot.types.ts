@@ -6,7 +6,6 @@ import { FreeFormObject } from './utils/misc';
 import { PubSubEvent } from './utils/pubSub';
 
 export interface Message {
-  appId: number,
   from: string;
   name: string | undefined;
   id: string;
